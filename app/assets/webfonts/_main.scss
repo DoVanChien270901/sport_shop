@@ -1,0 +1,13 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url('assets/fa-solid-900.woff2') format('woff2');
+  /* ... other font formats and styles ... */
+}

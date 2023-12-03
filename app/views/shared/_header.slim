@@ -1,0 +1,34 @@
+.header data-controller='sp-header'
+  .header__inner
+    .header__toggle
+      input#menu_toggle type='checkbox' data-action='click->sp-header#disableRoll'
+      label.label__curtain[for='menu_toggle']
+      .btn__menu
+        label[for='menu_toggle']
+          i.fal.fa-bars
+      .sidebar
+        ul
+          li
+            a[href="#"]
+              i.fas.fa-qrcode
+              |  Trang chủ
+          li
+            a[href="#"]
+              i.fas.fa-link
+              | Sản phẩm
+          li
+            a[href="#"]
+              i.fas.fa-stream
+              | Hỗ trợ khách hàng
+          li
+            a[href="#"]
+              i.fas.fa-calendar-week
+              |  Sale off
+          li
+            a[href="#"]
+              i.far.fa-question-circle
+              |  Add more
+    .header__logo
+      img src='https://www.coolmate.me/images/logo-coolmate-new.svg?v=1'
+    .header__actions
+      i.fas.fa-shopping-cart

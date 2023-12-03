@@ -1,0 +1,42 @@
+@import "jquery-ui.css";
+@import "shared/main";
+@import "sp/layouts/main";
+@import "sp/component/main";
+
+
+$red-100: #ff5151;
+
+@font-face {
+  font-family: "My Awesome Font";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: font-url("assets/fa-regular-400.woff2.woff2");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+//
+// ============= Footer
+.footer-basic {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  a {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+// ============= End Footer
+

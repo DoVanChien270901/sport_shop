@@ -1,0 +1,17 @@
+.container
+  .container__title
+    h2 SẢN PHẨM BÁN CHẠY
+  .container__main
+    .list__product
+      - @products.each do |item|
+        .product__content
+          a href='#'
+            .product__thumbnail
+              = image_tag src='product_default.jpg', style: 'height:auto; max-width:100%;'
+            .product__body
+              .product__content-title
+                h3 #{item.name}
+              .product__content-prices
+                span #{number_with_delimiter(item.price ,{precision: 3, delimiter: '.'})}đ
+              .product__add-cart 
+                button Mua Ngay

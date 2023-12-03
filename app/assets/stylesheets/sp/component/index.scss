@@ -1,0 +1,84 @@
+$red-100: #ff5151;
+
+.container {
+  .container__main {
+
+    .list__product {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-items: center;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      .product__content {
+        margin: 10px 10px 0 10px;
+        height: fit-content;
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+        .product__body {
+          font-size: 12px;
+          text-align: center;
+          .product__content-title h3 {
+            font-weight: 400;
+            padding-bottom: 0.25rem !important;
+            padding-top: 0.25rem !important;
+            margin: 0;
+          }
+
+          .product__content-prices {
+            color: #242424;
+            font-weight: 700;
+            color: #f00 !important;
+          }
+
+          .product__add-cart {
+            color: red;
+            height: fit-content;
+            width: fit-content;
+            margin: 5px auto 0 auto;
+            padding-bottom: 10px;
+            button {
+              position: relative;
+              width: 100%;
+              border: none;
+              background-color: $red-100;
+              color: white;
+              padding:1px 10px;
+              padding-left:30px;
+              position:relative;
+              color:#fff;
+              border-radius:1px;
+              font-size:14px;
+            }
+            button::after {
+              width: 25px;
+              height: 20px;
+              background-size: cover !important;
+              position: absolute;
+              left: -6px;
+              top: -0.5px;
+              content: "";
+              display: block;
+              border-right: 1px solid #fff;
+              background: url('assets/giohang.gif') no-repeat top center;
+            }
+          }
+        }
+      }
+      .product__thumbnail {
+        border: 1px solid #ededed;
+      }
+    }
+  }
+  .container__title {
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    span {
+      font-size: 25px;
+    }
+  }
+}
