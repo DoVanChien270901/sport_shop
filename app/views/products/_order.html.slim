@@ -1,0 +1,37 @@
+form.form-order#form-order
+  .option-select.js-size-selector
+    .title-select-size
+      | Kích thước: 
+      span.option-heading__title
+    .option-select__main
+      input[type="hidden" value="#{@product.id}" name="id"]
+      .option-select__inner
+        input[type="radio" name="shorts_size" value="s" id="s"]
+        label.option-select__item.option-size-s for="s"
+          | S
+      .option-select__inner
+        input[type="radio" name="shorts_size" value="m" id="m"]
+        label.option-select__item.option-size-m for="m"
+          | M
+      .option-select__inner
+        input[type="radio" name="shorts_size" value="l" id="l"]
+        label.option-select__item.option-size-l for="l"
+          | L
+      .option-select__inner
+        input[type="radio" name="shorts_size" value="xl" id="xl"]
+        label.option-select__item.option-size-xl for="xl"
+          | XL
+      .option-select__inner
+        input[type="radio" name="shorts_size" value="xxl" id="xxl"]
+        label.option-select__item.option-size-xxl for="xxl"
+          | XXL
+  .form-order__actions
+    .form-order__quantity
+      .quantity
+        a.quantity__reduce[href="#" data-action="click->product#reduce"]
+          | -
+        input.quantity__control[type="number" value="1" max="180" min="1" name="quantily"]
+        a.quantity__augure[href="#" data-action="click->product#augure"]
+          | +
+  .product-single__button
+    a.btn_order[href="#" id="add_to_cart" data-action="click->product#addToCart"] Thêm vào giỏ hàng

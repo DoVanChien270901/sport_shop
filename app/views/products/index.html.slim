@@ -1,11 +1,29 @@
-p style="color: green" = notice
-
-h1 Products
-
-#products
-  - @products.each do |product|
-    == render product
-    p
-      = link_to "Show this product", product
-
-= link_to "New product", new_product_path
+main.product__single
+  section
+    .container
+      .product__single--infomation
+        / SEO breadcrumb
+        .breadcrumb
+          li
+            a href='/' Trang chủ
+          li
+            a href="#{product_detail_path(id: @product.id)}" Sản Phẩm
+      .product-single__wrapper data-controller='product'
+        .product-single__images
+          .product-single__thumbnails
+            #slick-slider.swiper-container
+              .product-img__slider
+                - for i in 1..6
+                  = render partial: 'photo', locals: { path: "product_default_#{i}.jpg" }
+        .product-single__info
+          h1 = @product.name
+          .product__price
+            span.price-sale 
+              = "#{number_with_delimiter(@product.price ,{precision: 3, delimiter: '.'})}đ"
+            span.price-root
+              = "#{number_with_delimiter(500000 ,{precision: 3, delimiter: '.'})}đ"
+            span.price-sale__percent
+              | -2%
+        .product-single__order
+          = render partial: 'order'
+        = render partial: 'dialog_cart_added', locals: { product: @product }

@@ -1,0 +1,126 @@
+.product__single .container {
+  .product__single--infomation {
+    li {
+      list-style-type: none;
+      display: inline;
+    }
+    li a {
+      text-decoration: none;
+    }
+
+    li:nth-child(n+2)::before {
+      content: '/';
+      padding: 0 10px;
+    }
+  }
+
+  .swiper-container {
+    width:100%;
+  }
+
+  .swiper-container .next {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right:20px;
+    z-index:3;
+    cursor:pointer;
+  }
+
+  .product-img__slider {
+    .slick-arrow {
+      position: absolute;
+      bottom: 20px;
+      z-index: 999;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    .slick-arrow::before {
+      margin: 0 auto;
+    }
+
+    .arrow-next {
+      right: 20px;
+    }
+
+    .arrow-prev {
+      left: 20px;
+    }
+
+    .slick-dots li {
+      color: black;
+    }
+    .photo_slider {
+      margin: 10px;
+      img {
+        border-radius: 16px;
+        margin: auto;
+        width: 100%;
+        height: 606px;
+      }
+    }
+  }
+
+  #slick-slider {
+    visibility: hidden;
+  }
+  #slick-slider .slick-initialized {
+    visibility: visible;
+
+    .photo_slider:not(:first-child) img {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+  }
+  .swiper-container .prev {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:20px;
+    z-index:3;
+    cursor:pointer;
+  }
+  .bgimage {
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+  }
+
+  .bg-image.slick-slide {
+    width: 412px;
+    height: 606px;
+    border-radius: 16px;
+  }
+
+  .product-single__info {
+    margin-left: 10px;
+    h1 {
+      font-size: 21px;
+      margin-block-start: 0;
+      margin-block-end: 5px;
+    }
+
+    .product__price {
+      margin-block-end: 5px;
+      display: flex;
+      align-items: left;
+      .price-sale {
+        font-weight: bold;
+      }
+      .price-root {
+        margin-left: 15px;
+        color: #c4c4c4;
+      }
+      .price-sale__percent {
+        margin-left: 5px;
+        color: #ff3102;
+      }
+    }
+  }
+}

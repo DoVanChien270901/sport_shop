@@ -1,0 +1,22 @@
+.dialog__component[data-action='click->product#clickOutSide' data-product-target='dialog']
+  .dialog__cart-added[data-product-target='dialogContent']
+    h1.dialog__title
+      | Đã thêm vào giỏ hàng!
+    hr
+    .dialog__body
+      .dialog__body-content
+        = image_tag("product_default_5.jpg", size: '80x110', class: 'prod__thumbnail')
+        .prod__info
+          .prod__name
+            | #{product.name}
+          .prod__size[data-product-target='dialogProdSize']
+          .prod__price
+            span.price-sale 
+              = "#{number_with_delimiter(product.price ,{precision: 3, delimiter: '.'})}đ"
+            span.price-root
+              = "#{number_with_delimiter(500000 ,{precision: 3, delimiter: '.'})}đ"
+            span.price-sale__percent
+              | -2%
+      .dialog__body-action
+        button.action-button
+          | Xem giỏ hàng

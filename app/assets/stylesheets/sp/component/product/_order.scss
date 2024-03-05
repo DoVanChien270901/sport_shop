@@ -1,0 +1,107 @@
+.product-single__order {
+  .form-order {
+    .title-select-size {
+      margin-left: 10px;
+      margin-bottom: 3px;
+    }
+    .option-select .option-select__main {
+      display: flex;
+      flex-wrap: wrap;
+      .option-size-tooltip {
+        display: none;
+      }
+      .option-select__inner input {
+        display: none;
+      }
+
+      input[type="radio"]:checked + label {
+        background-color: #212121 !important;
+        color: white;
+      }
+
+      .option-select__inner input:not(:checked) {
+        background-color: #d9d9d9;
+        color: #212121;
+      }
+
+      .option-select__inner {
+        margin-left: 10px;
+        width: 61px;
+        height: 31px;
+
+        label {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          background-color: #d9d9d9;
+          border-radius: 0.375rem;
+          line-height: 100%;
+          transition: background-color 0.5s ease;
+          transition: color 0.5s ease;
+        }
+      }
+    }
+  }
+
+  .form-order__actions {
+    .quantity {
+      display: flex;
+      justify-content: space-between;
+      width: 100px;
+      height: 40px;
+      border: 1px solid #000;
+      border-radius: 1.8rem;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    .quantity__control {
+      text-align: center;
+      border: 0;
+      pointer-events: none;
+      max-width: 40px;
+      font-size: 16px;
+    }
+
+    .quantity__reduce, .quantity__augure {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: 21px;
+      padding: 0 10px 0 10px;
+      border-radius: 1.8rem;
+      color: #212121;
+    }
+    margin: 10px;
+  }
+
+  .product-single__button {
+    height: 48px;
+    margin-bottom: 40px;
+
+    .btn_order {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 48px;
+      background-color: #000 !important;
+      border-radius: 1.5rem;
+      border: 2px solid #d9d9d9 !important;
+      margin-left: 10px;
+      margin-right: 10px;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      background-color: #d9d9d9;
+      text-decoration: none;
+    }
+
+    a::before {
+      font-family: "Font Awesome 5 Pro Regular";
+      content: "\f217";
+    }
+  }
+}
